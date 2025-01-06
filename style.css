@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+:root {
+  /* Primary */
+  --Pink: hsl(322, 100%, 66%);
+
+  /* Neutral */
+  --Very--Pale--Cyan: hsl(193, 100%, 96%);
+  --Very--Dark--Cyan: hsl(192, 100%, 9%);
+  --Grayish--Blue: hsl(208, 11%, 55%);
+
+  /* Font-Size */
+  --big: 1.125rem;
+  --smallish: 1rem;
+  --small: 0.75rem;
+  --smaller: 0.5rem;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 100px;
+  font-family: "Open Sans", sans-serif;
+  transition: opacity 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 70%;
+}
+
+/* HEADER */
+
+#header {
+  background: url(./img/bg-hero-mobile.svg) no-repeat bottom;
+  background-size: cover;
+  background-color: var(--Very--Pale--Cyan);
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#header__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+
+  button {
+    background-color: rgb(255, 255, 255);
+    padding: 0.3em 1.5em;
+    font-size: var(--small);
+    font-weight: 600;
+  }
+}
+
+#header__description {
+  text-align: center;
+
+  img {
+    width: 14rem;
+    margin-inline: auto;
+  }
+}
+
+#header__text {
+  h1 {
+    font-size: var(--big);
+    font-weight: 600;
+    max-width: 20ch;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: var(--small);
+    max-width: 33ch;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    margin-bottom: 2rem;
+  }
+}
+
+.get__started {
+  background-color: var(--Pink);
+  padding: 0.6em 4em;
+  color: white;
+  font-weight: 600;
+  font-size: var(--small);
+}
+
+/* MAIN */
+
+main {
+  font-family: "Open Sans", sans-serif;
+  padding: 1rem;
+  position: relative;
+}
+
+.box {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  margin-bottom: 6rem;
+
+  &:not(:nth-child(3)) {
+    margin-bottom: 2rem;
+  }
+
+  img {
+    width: 200px;
+    margin: 1.5rem auto 1.5rem;
+  }
+}
+
+.main__text {
+  h2 {
+    font-weight: 700;
+    font-size: var(--big);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: var(--small);
+    opacity: 50%;
+    max-width: 31.1ch;
+    margin-inline: auto;
+  }
+}
+
+#float {
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  z-index: 2;
+  max-width: 500px;
+  margin-inline: auto;
+  margin-bottom: -5rem;
+
+  h2 {
+    font-weight: 700;
+    font-size: var(--small);
+    margin: 1rem 0;
+    scale: 1.1;
+  }
+
+  button {
+    margin-bottom: 1rem;
+    padding: 0.5em 3em;
+  }
+}
+
+/* FOOTER */
+
+footer {
+  font-family: "Open Sans", sans-serif;
+  background: var(--Very--Dark--Cyan);
+  padding: 7rem 1rem 1rem;
+  color: white;
+
+  p,
+  li {
+    font-size: var(--small);
+  }
+}
+
+#max {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+#foot {
+  margin-top: 1.5rem;
+}
+
+.DF {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+
+  &:not(:nth-child(1)) {
+    align-items: center;
+    margin-top: 1rem;
+  }
+}
+
+#left {
+  margin-bottom: 2rem;
+}
+
+#middle {
+  ul li {
+    list-style: none;
+    cursor: pointer;
+
+    &:not(:nth-child(6)) {
+      padding-bottom: 0.5rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#location {
+  p {
+    max-width: 33ch;
+  }
+}
+
+#right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  svg {
+    outline: 1px solid white;
+    border-radius: 10px;
+    padding: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      outline: none;
+      scale: 1.1;
+      rotate: 5deg;
+    }
+  }
+}
+
+#copyright {
+  text-align: center;
+  font-size: var(--smaller);
+}
+
+#max__copy {
+  max-width: 950px;
+  margin-inline: auto;
+}
+
+@media (min-width: 500px) {
+  #header__title {
+    margin-bottom: 4rem;
+  }
+  #header__text {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  #header__description {
+    img {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #header {
+    background-image: url(./img/bg-hero-desktop.svg);
+    padding-inline: 2rem;
+    min-height: 80vh;
+  }
+
+  #header__title {
+    margin-bottom: 5rem;
+  }
+
+  #header__text {
+    h1 {
+      margin-inline: 0;
+      font-size: var(--big);
+    }
+
+    p {
+      max-width: 50ch;
+    }
+
+    button {
+      margin-bottom: 0;
+    }
+  }
+  #header__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+
+    max-width: 1000px;
+    margin-inline: auto;
+
+    img {
+      width: 27rem;
+      margin-left: auto;
+    }
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+
+    text-align: left;
+    max-width: 750px;
+    margin-inline: auto;
+
+    p {
+      max-width: 49ch;
+      margin-inline: auto;
+    }
+  }
+
+  #box-1,
+  #box-3 {
+    flex-direction: row-reverse;
+
+    .main__text {
+      padding-left: 2rem;
+    }
+  }
+
+  footer {
+    padding: 7rem 1.5rem 0.5rem;
+  }
+
+  #right {
+    margin-bottom: 0rem;
+    align-items: flex-start;
+  }
+
+  #middle {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+  }
+
+  #location {
+    p {
+      max-width: 40ch;
+    }
+  }
+
+  #foot {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #copyright {
+    text-align: right;
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 900px) {
+  #header__text {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    button {
+      padding: 1em 4em;
+    }
+  }
+}
