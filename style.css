@@ -79,7 +79,7 @@ button:hover {
   text-align: center;
 
   img {
-    width: 14rem;
+    width: 25rem;
     margin-inline: auto;
   }
 }
@@ -161,7 +161,7 @@ main {
   text-align: center;
   background-color: white;
   z-index: 2;
-  max-width: 500px;
+  max-width: 600px;
   margin-inline: auto;
   margin-bottom: -5rem;
 
@@ -284,6 +284,17 @@ footer {
       margin-bottom: 1rem;
     }
   }
+
+  #float {
+    padding: 2rem 1.5rem;
+
+    h2 {
+      font-weight: 700;
+      font-size: var(--big);
+      margin: 1rem 0;
+      scale: 1.1;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -334,12 +345,24 @@ footer {
     gap: 6rem;
 
     text-align: left;
-    max-width: 750px;
+    max-width: 800px;
     margin-inline: auto;
+
+    img {
+      width: 250px;
+      margin: 1.5rem auto 1.5rem;
+    }
 
     p {
       max-width: 49ch;
       margin-inline: auto;
+    }
+  }
+
+  .main__text {
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
   }
 
